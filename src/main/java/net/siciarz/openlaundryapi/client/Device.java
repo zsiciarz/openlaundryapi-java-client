@@ -10,7 +10,7 @@ public class Device {
     @JsonProperty("device_id")
     private String deviceId;
     private String name;
-    private String status;
+    private DeviceStatus status;
     private String program;
     @JsonProperty("time_started")
     private String timeStarted;
@@ -43,11 +43,11 @@ public class Device {
         this.name = name;
     }
 
-    public String getStatus() {
+    public DeviceStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(DeviceStatus status) {
         this.status = status;
     }
 
