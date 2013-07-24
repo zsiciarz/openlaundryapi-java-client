@@ -1,15 +1,20 @@
 package net.siciarz.openlaundryapi.client;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
 /**
  * A representation of a washing machine.
  * 
  */
 public class Device {
+    @JsonProperty("device_id")
     private String deviceId;
     private String name;
     private String status;
     private String program;
+    @JsonProperty("time_started")
     private String timeStarted;
+    @JsonProperty("time_remaining")
     private String timeRemaining;
     private int progress;
 
