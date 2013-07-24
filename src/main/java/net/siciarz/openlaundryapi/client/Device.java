@@ -10,6 +10,10 @@ public class Device {
     private String status;
     private String program;
 
+    public Device() {
+        this("<empty>", "<empty>");
+    }
+
     public Device(String deviceId, String name) {
         this.deviceId = deviceId;
         this.name = name;
