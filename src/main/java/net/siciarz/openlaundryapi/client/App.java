@@ -11,9 +11,13 @@ import org.codehaus.jackson.map.ObjectMapper;
 public class App {
     public static void main(String[] args) {
         System.out.println("Open Laundry API Java client");
-        URL apiUrl;
+        String deviceId = "666";
+        if (args.length > 0) {
+            deviceId = args[0];
+        }
         try {
-            apiUrl = new URL("http://openlaundryapi.org/api/device/666/");
+            URL apiUrl = new URL("http://openlaundryapi.org/api/device/"
+                            + deviceId + "/");
             ObjectMapper mapper = new ObjectMapper();
             Device device = mapper.readValue(apiUrl, Device.class);
             System.out.println(device.getName());
