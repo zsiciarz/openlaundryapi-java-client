@@ -21,6 +21,7 @@ public class App {
             ObjectMapper mapper = new ObjectMapper();
             Device device = mapper.readValue(apiUrl, Device.class);
             System.out.println(device.getName());
+            System.out.println(device.getStatus());
         } catch (Exception e) {
             e.printStackTrace();
         }
