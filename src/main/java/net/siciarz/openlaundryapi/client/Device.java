@@ -9,6 +9,9 @@ public class Device {
     private String name;
     private String status;
     private String program;
+    private String timeStarted;
+    private String timeRemaining;
+    private int progress;
 
     public Device() {
         this("<empty>", "<empty>");
@@ -49,5 +52,29 @@ public class Device {
 
     public void setProgram(String program) {
         this.program = program;
+    }
+
+    public String getTimeStarted() {
+        return timeStarted;
+    }
+
+    public void setTimeStarted(String timeStarted) {
+        this.timeStarted = timeStarted;
+    }
+
+    public String getTimeRemaining() {
+        return timeRemaining;
+    }
+
+    public void setTimeRemaining(String timeRemaining) {
+        this.timeRemaining = timeRemaining;
+    }
+
+    public int getProgress() {
+        return progress;
+    }
+
+    public void setProgress(int progress) {
+        this.progress = progress;
     }
 }
