@@ -11,5 +11,5 @@ dependencies {
     compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
     compile 'org.slf4j:slf4j-api:1.7.5'
     compile 'org.slf4j:slf4j-simple:1.7.5'
-    testCompile 'junit:junit:3.8.1'
+    testCompile 'junit:junit:4.11'
 }
