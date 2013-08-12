@@ -1,8 +1,5 @@
 package net.siciarz.openlaundryapi.client;
 
-import java.net.URL;
-
-import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,15 +15,11 @@ public class App {
         if (args.length > 0) {
             deviceId = args[0];
         }
-        try {
-            URL apiUrl = new URL("http://openlaundryapi.org/api/device/"
-                            + deviceId + "/");
-            ObjectMapper mapper = new ObjectMapper();
-            Device device = mapper.readValue(apiUrl, Device.class);
+        Client apiClient = new Client();
+        Device device = apiClient.getDevice(deviceId);
+        if (device != null) {
             System.out.println(device.getName());
             System.out.println(device.getStatus());
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }
