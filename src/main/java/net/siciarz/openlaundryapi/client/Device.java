@@ -1,5 +1,7 @@
 package net.siciarz.openlaundryapi.client;
 
+import java.util.Date;
+
 import org.codehaus.jackson.annotate.JsonProperty;
 
 /**
@@ -13,7 +15,7 @@ public class Device {
     private DeviceStatus status;
     private String program;
     @JsonProperty("time_started")
-    private String timeStarted;
+    private Date timeStarted;
     @JsonProperty("time_remaining")
     private String timeRemaining;
     private int progress;
@@ -59,11 +61,11 @@ public class Device {
         this.program = program;
     }
 
-    public String getTimeStarted() {
+    public Date getTimeStarted() {
         return timeStarted;
     }
 
-    public void setTimeStarted(String timeStarted) {
+    public void setTimeStarted(Date timeStarted) {
         this.timeStarted = timeStarted;
     }
 
