@@ -19,9 +19,8 @@ public class Client {
     }
 
     public Device getDevice(String deviceId) {
-        URL apiUrl;
         try {
-            apiUrl = new URL(URL_PREFIX + "device/" + deviceId + "/");
+            final URL apiUrl = new URL(URL_PREFIX + "device/" + deviceId + "/");
             logger.debug("Sending GET request to " + apiUrl);
             ObjectMapper mapper = new ObjectMapper();
             return mapper.readValue(apiUrl, Device.class);
